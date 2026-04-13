@@ -180,4 +180,4 @@ def get_attempts(user_id):
     return jsonify({"attempts": attempts}), 200
 # app.run() is ALWAYS the very last line
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
