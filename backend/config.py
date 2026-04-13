@@ -1,12 +1,16 @@
 import pymysql
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def get_db():
     connection = pymysql.connect(
-        host="mysql-357d3cd4-interview-simulator.e.aivencloud.com",
-        port=22559,
-        user="avnadmin",
-        password="AVNS_9A6D9MTGs1ptj3YjwAi",
-        database="defaultdb",
+        host=os.getenv("DB_HOST"),
+        port=int(os.getenv("DB_PORT")),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        database=os.getenv("DB_NAME"),
         ssl={"ssl_ca": None},
         ssl_verify_cert=False
     )
