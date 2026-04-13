@@ -70,10 +70,11 @@ def login():
     }, "secret_key", algorithm="HS256")
 
     return jsonify({
-        "message": "Login successful!",
-        "token": token,
-        "name": user[1]
-    }), 200
+    "message": "Login successful!",
+    "token": token,
+    "name": user[1],
+    "user_id": user[0]
+}), 200
 
 
 # -------- HOME ROUTE --------
