@@ -1,6 +1,6 @@
 import requests
 
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = "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"
 
 def call_ai(prompt):
     response = requests.post(
