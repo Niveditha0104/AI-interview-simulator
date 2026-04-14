@@ -15,7 +15,7 @@ function Practice({ setPage }) {
     setResult(null);
     setCode("");
     try {
-      const response = await fetch("http://localhost:5000/question", {
+       const response = await fetch("https://ai-interview-simulator-ycbl.onrender.com/question", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ topic, difficulty }),
@@ -41,7 +41,7 @@ function Practice({ setPage }) {
     }
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/evaluate", {
+        const response = await fetch("https://ai-interview-simulator-ycbl.onrender.com/evaluate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

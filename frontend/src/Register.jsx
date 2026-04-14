@@ -13,7 +13,7 @@ function Register({ setPage }) {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:5000/register", {
+      const response = await fetch("https://ai-interview-simulator-ycbl.onrender.com/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password }),

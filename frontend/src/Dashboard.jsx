@@ -9,9 +9,7 @@ function Dashboard({ user, setPage }) {
 
   const fetchAttempts = async () => {
     try {
-      const response = await fetch(
-        `http://localhost:5000/attempts/${localStorage.getItem("user_id")}`
-      );
+      const response = await fetch(`https://ai-interview-simulator-ycbl.onrender.com/attempts/${localStorage.getItem("user_id")}`);
       const data = await response.json();
       if (response.ok) setAttempts(data.attempts);
     } catch (err) {
