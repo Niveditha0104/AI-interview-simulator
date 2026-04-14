@@ -8,7 +8,7 @@ def call_ai(prompt):
         headers={
             "Authorization": f"Bearer {OPENROUTER_API_KEY}",
             "Content-Type": "application/json",
-            "HTTP-Referer": "http://localhost:3000",
+            "HTTP-Referer": "https://ai-interview-simulator-five.vercel.app",
             "X-Title": "AI Interview Simulator"
         },
         json={
